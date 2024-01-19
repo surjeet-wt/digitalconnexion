@@ -1,0 +1,52 @@
+// Var
+$orange: #7701ec;
+$para: #565656;
+$heading: #060621;
+$blue: #000136;
+$number-of-elements: 9;
+$white: #fff;
+$dividColor: #DEDEDE;
+button{
+  &:focus{
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+a{
+  text-decoration: none;
+}
+
+// Mixin
+@mixin transition{
+    transition: all ease-in-out 0.5s;
+}
+
+@mixin afterLine{
+  &::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    background: $orange;
+    height: 1px;
+    right: 0;
+    @include transition
+}
+}
+
+@mixin afterLineHover{
+      
+  &:hover{
+    color: $orange;
+    &::before{
+        width: 100%;
+    }
+}
+}
+
+
+
+
+
